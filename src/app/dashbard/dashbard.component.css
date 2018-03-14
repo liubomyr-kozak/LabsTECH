@@ -1,0 +1,15 @@
+.site-item{
+    width: 50%;
+    float: left;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    background: #f2cbef;
+    box-sizing: border-box;
+    box-shadow: 0 0 1px #fff;
+    cursor: pointer;
+}
+
+.site-item:hover{
+    background: #ee90e7;
+}

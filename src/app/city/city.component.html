@@ -1,0 +1,12 @@
+ Site overview: {{City.site}}
+
+<table>
+    <tr>
+        <th *ngFor="let col of CityTable.columnName">{{col}}</th>
+    </tr>
+    <tr *ngFor="let item of City.equips" class="cityItem" routerLink="/city/{{City.site}}/diagram/{{item.equip_name}}">
+        <td *ngFor="let def of CityTable.columnDefs">
+            {{item[def]}}
+        </td>
+    </tr>
+</table>
