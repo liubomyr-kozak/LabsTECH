@@ -1,7 +1,13 @@
-<p>
+<h2>Site: {{city}} – Equipment: {{equip}}</h2>
+<p> {{equip}}: Sensors graph</p>
 
-  <x-chartist
-    [data]="data"
-    [type]="type">
-  </x-chartist>
-</p>
+<div class="chartist-container">
+
+  <line-chart></line-chart>
+
+  <br>
+  <label *ngFor="let eq of muiltyGraph" (click)="displayEquip(eq.timeseries)">
+    <input type="checkbox">
+    {{eq.equip_name}}
+  </label>
+</div>

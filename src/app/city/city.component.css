@@ -1,0 +1,55 @@
+:host{
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 1px #2f4379;
+    padding: 9px;
+    background: #152a63;
+}
+
+table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.table_head{
+    border: 1px solid #fff;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.table_head th {
+    height: 30px;
+    padding: 10px;
+    text-align: left;
+}
+
+.table_tr{
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid #fff
+}
+
+.table_tr:hover {
+    background: #6f737c!important;
+}
+
+.table_tr:nth-child(2n){
+    background: #13348d;
+}
+
+@media screen and (max-width: 520px) {
+    table{
+        font-size: 11px
+    }
+}
+

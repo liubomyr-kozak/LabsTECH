@@ -1,15 +1,45 @@
-.site-item{
-    width: 50%;
-    float: left;
-    height: 200px;
-    text-align: center;
-    line-height: 200px;
-    background: #f2cbef;
-    box-sizing: border-box;
-    box-shadow: 0 0 1px #fff;
-    cursor: pointer;
+:host{
+    display: block;
 }
 
-.site-item:hover{
-    background: #ee90e7;
+.site-container{
+    font-size:0px; 
 }
+.sites-cover{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 2px #fff;
+    border-radius: 16px;
+}
+
+.site-item{
+    display: inline-block;
+    width: 40%;
+    height: 200px;
+    text-align: center;
+    line-height: 60px;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    padding: 200px 0 0px;
+    margin: 0 5% 56px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 520px) {
+    .site-item{
+        width: 90%;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .site-item{
+        width: 20%;
+    }
+}
+
+

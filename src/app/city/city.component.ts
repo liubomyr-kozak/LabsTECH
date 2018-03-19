@@ -40,7 +40,8 @@ export class CityComponent implements OnInit {
 
     this.route.params.subscribe(params => {
       let cityStoreData = this.appStore.getCity(params['cityName']);
-      let uniqueData = this.appStore.getUniqueEquipData(cityStoreData.equips);
+      let uniqueData = this.appStore.getUniqueEquipData(cityStoreData.equips)
+    
       this.City['equips'] = this.setCorrectFormateToData(uniqueData);
       this.City['site'] = cityStoreData.site;
 
@@ -51,12 +52,19 @@ export class CityComponent implements OnInit {
 
   setCorrectFormateToData(data) {
     return data.map(item => {
-      item["time"] = this.datePipe.transform(item["time"], 'yyyy-MM-dd');
-      item["timeseries"] = this.datePipe.transform(item["time"], 'HH:MM:SS');
-      item["S3avg"] = this.decimalPipe.transform(item["S3avg"], '2.1-2');
-      item["S4avg"] = this.decimalPipe.transform(item["S4avg"], '2.1-2');
-      item["TempAvg"] = this.decimalPipe.transform(item["TempAvg"], '2.1-2');
-      return item;
+      let newItem = {};
+      newItem["equip_name"] = item["equip_name"];
+      newItem["time"] = this.datePipe.transform(item["time"], 'yyyy-MM-dd');
+      newItem["timeseries"] = this.datePipe.transform(item["time"], 'HH:MM:SS');
+      newItem["S3avg"] = this.decimalPipe.transform(item["S3avg"], '2.1-2');
+      newItem["S4avg"] = this.decimalPipe.transform(item["S4avg"], '2.1-2');
+      newItem["TempAvg"] = this.decimalPipe.transform(item["TempAvg"], '2.1-2');
+
+      return newItem;
     });
+  }
+
+  showAll(){
+    debugger
   }
 }

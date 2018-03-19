@@ -1,7 +1,10 @@
-
-<h2>Site List</h2>
+<h2>
+  Site List</h2>
 <p>Click to view site</p>
 
 <div class="site-container">
-  <div *ngFor="let siteItem of sites" class="site-item" routerLink="/city/{{siteItem.site}}">{{siteItem.site}}</div>
+  <div *ngFor="let siteItem of sites" class="site-item" routerLink="/city/{{siteItem.site}}">
+    <div class="sites-cover" [ngStyle]="{'background-image': 'url(' + siteItem.imageSrc + ')'}"></div>
+    <span>{{siteItem.site}}</span>
+  </div>
 </div>
