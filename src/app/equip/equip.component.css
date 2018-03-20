@@ -1,90 +1,75 @@
-:host{
+@import './../../../node_modules/c3/c3.min.css';
+equip {
     max-width: 800px;
     display: block;
     margin: 0 auto;
 }
 
-.chartist-container{
-    background: #ffffffe0;
+.chartist-container {
+    background: #243142e0;
     padding: 20px 0 0;
 }
 
+#lineChart {
+    color: black
+}
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0; }
-
-.sr-only-focusable:active, .sr-only-focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  clip: auto; }
-
-.checkbox,
-.radio {
+.legend{
+  text-align: right
+}
+.legend-item{
   display: inline-block;
-  margin-bottom: 15px; }
-  .checkbox:hover,
-  .radio:hover {
-    cursor: pointer; }
-  .checkbox .fa,
-  .radio .fa {
-    width: 1em; }
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  margin: 0 15px 5px 0;
+  font-size: 14px;
+}
 
-.indent {
-  padding-left: 30px; }
-  .indent .fa {
-    margin-left: -30px; }
+.legend-items-color {
+  display: inline-block;
+  width: 3px;
+  height: 15px;
+  vertical-align: text-top;
+}
 
-.checkbox input[type="checkbox"],
-.radio input[type="radio"] {
-  display: none; }
-  .checkbox input[type="checkbox"] + i:before,
-  .radio input[type="radio"] + i:before {
-    content: "\f096";
-    position: relative;
-    bottom: -4px;
-    margin-right: 5px;
-    color: #999; }
+.legend-items-checkbox {
+  margin: 0 3px 0 4px;
+}
 
-.checkbox:hover input[type="checkbox"] + i:before,
-.radio:hover input[type="radio"] + i:before {
-  color: green; }
+.legend-item[data-hide="true"] .legend-items-checkbox{
+  opacity: 0.3;
+}
 
-.checkbox input[type="checkbox"]:checked + i:before,
-.radio input[type="radio"]:checked + i:before {
-  content: "\f046";
-  color: green; }
 
-.checkbox input[type="checkbox"]:disabled + i:before,
-.checkbox input[type="checkbox"]:disabled:checked + i:before,
-.radio input[type="radio"]:disabled + i:before,
-.radio input[type="radio"]:disabled:checked + i:before {
-  color: #ddd; }
+#lineChart.c3 .c3-axis-x path,
+#lineChart.c3 .c3-axis-x line,
+#lineChart.c3 .c3-axis-y path,
+#lineChart.c3 .c3-axis-y line {
+  stroke: white;
+}
 
-/*RADIO*/
-.radio input[type="radio"] + i:before {
-  content: "\f1db"; }
+#lineChart.c3 .c3-axis-x g,
+#lineChart.c3 .c3-axis-y g,
+#lineChart.c3 .c3-legend-item-data text,
+#lineChart.c3 .c3-axis-y-label,
+#lineChart.c3 .c3-axis-x-label,
+#lineChart.c3 .c3-legend-item {
+  fill: white;
+}
 
-.radio input[type="radio"]:checked + i:before {
-  content: "\f058"; }
+/*when displaying the data on the chart */
+#lineChart.c3 text.c3-text { 
+  fill: white!important;
+  stroke: white!important;
+  stroke-opacity: 0.3!important;
+}
 
-/* CHECKBOX&RADIO XS*/
-.checkbox-xs input[type="checkbox"] + i:before,
-.radio-xs input[type="radio"] + i:before {
-  bottom: 0; }
+/* for the tooltip text color */
+#lineChart .c3 .c3-tooltip-container {
+  color:darkgrey;
+}
 
-.checkbox-xs.indent,
-.radio-xs.indent {
-  padding-left: 20px; }
-  .checkbox-xs.indent .fa,
-  .radio-xs.indent .fa {
-    margin-left: -20px; }
+.c3 svg {
+  font: 11px sans-serif;
+}

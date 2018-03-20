@@ -21,7 +21,6 @@ import { AppState, InternalStateType } from './app.service';
 import { DashbardComponent } from './dashbard/dashbard.component';
 import { CityComponent } from './city/city.component';
 import { AppStoreModule } from './shared/app-store/app-store.module';
-import { LineChartModule } from './equip/line-chart/LineChart.module';
 
 import '../styles/styles.scss';
 import { EquipComponent } from './equip/equip.component';
@@ -49,7 +48,6 @@ import { EquipComponent } from './equip/equip.component';
     AppRoutingModule,
     AppStoreModule,
     AngularFontAwesomeModule,
-    LineChartModule
   ],
   providers: [
     environment.ENV_PROVIDERS,

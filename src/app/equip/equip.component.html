@@ -2,12 +2,5 @@
 <p> {{equip}}: Sensors graph</p>
 
 <div class="chartist-container">
-
-  <line-chart></line-chart>
-
-  <br>
-  <label *ngFor="let eq of muiltyGraph" (click)="displayEquip(eq.timeseries)">
-    <input type="checkbox">
-    {{eq.equip_name}}
-  </label>
+  <div id="lineChart"></div>
 </div>
